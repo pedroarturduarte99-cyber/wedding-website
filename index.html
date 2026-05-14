@@ -1,0 +1,1114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Isabella &amp; Pedro · 10.09.2027</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300;1,400&family=Jost:wght@300;400;500&display=swap" rel="stylesheet" />
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
+    body {
+      font-family: 'Jost', Georgia, serif;
+      font-weight: 300;
+      background-color: #F7F3EE;
+      color: #2D2622;
+      font-size: 16px;
+      line-height: 1.75;
+    }
+
+    /* ─── NAVIGATION ─── */
+    nav {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      z-index: 999;
+      background-color: #FDFAF6;
+      border-bottom: 1px solid #E0D5C8;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 8px;
+      padding: 0 24px;
+      height: 56px;
+    }
+
+    nav a {
+      font-family: 'Jost', sans-serif;
+      font-weight: 400;
+      font-size: 11px;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: #7A6F69;
+      text-decoration: none;
+      padding: 6px 14px;
+      border-radius: 2px;
+      transition: color 0.2s ease;
+    }
+
+    nav a:hover { color: #9B7A5E; }
+
+    nav .nav-rsvp {
+      background-color: #9B7A5E;
+      color: #FDFAF6;
+      padding: 8px 20px;
+      border-radius: 2px;
+      margin-left: 12px;
+    }
+
+    nav .nav-rsvp:hover { background-color: #B87355; color: #FDFAF6; }
+
+    /* ─── SHARED SECTION STYLES ─── */
+    .section-wrap {
+      max-width: 860px;
+      margin: 0 auto;
+      padding: 100px 40px;
+    }
+
+    .section-label {
+      font-family: 'Jost', sans-serif;
+      font-weight: 400;
+      font-size: 10px;
+      letter-spacing: 0.35em;
+      text-transform: uppercase;
+      color: #B87355;
+      display: block;
+      margin-bottom: 16px;
+    }
+
+    h2 {
+      font-family: 'Cormorant Garamond', Georgia, serif;
+      font-weight: 300;
+      font-size: 48px;
+      line-height: 1.1;
+      color: #2D2622;
+      margin-bottom: 40px;
+    }
+
+    h2 em {
+      font-style: italic;
+      color: #3D5F7A;
+    }
+
+    p {
+      font-family: 'Jost', sans-serif;
+      font-weight: 300;
+      font-size: 16px;
+      line-height: 1.85;
+      color: #7A6F69;
+      margin-bottom: 20px;
+    }
+
+    p:last-child { margin-bottom: 0; }
+
+    .ornament {
+      display: block;
+      text-align: center;
+      font-family: 'Cormorant Garamond', Georgia, serif;
+      font-size: 22px;
+      color: #D4B99A;
+      letter-spacing: 0.3em;
+      margin: 48px 0;
+    }
+
+    .section-divider {
+      border: none;
+      border-top: 1px solid #E0D5C8;
+      margin: 0;
+    }
+
+    /* ─── HERO ─── */
+    #hero {
+      min-height: 100vh;
+      background-color: #FDFAF6;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      padding: 80px 40px 60px;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .hero-bg-left {
+      position: absolute;
+      top: 0; left: 0;
+      width: 40%;
+      height: 100%;
+      background-color: #C8D9E6;
+      opacity: 0.12;
+      border-radius: 0 60% 60% 0;
+      pointer-events: none;
+    }
+
+    .hero-bg-right {
+      position: absolute;
+      bottom: 0; right: 0;
+      width: 35%;
+      height: 70%;
+      background-color: #D4B99A;
+      opacity: 0.13;
+      border-radius: 60% 0 0 60%;
+      pointer-events: none;
+    }
+
+    .hero-eyebrow {
+      font-family: 'Jost', sans-serif;
+      font-weight: 400;
+      font-size: 11px;
+      letter-spacing: 0.3em;
+      text-transform: uppercase;
+      color: #9B7A5E;
+      margin-bottom: 36px;
+    }
+
+    .hero-names {
+      font-family: 'Cormorant Garamond', Georgia, serif;
+      font-weight: 300;
+      font-size: 88px;
+      line-height: 1.0;
+      color: #2D2622;
+      margin-bottom: 12px;
+    }
+
+    .hero-names em {
+      font-style: italic;
+      color: #3D5F7A;
+      font-size: 72px;
+    }
+
+    .hero-tagline {
+      font-family: 'Cormorant Garamond', Georgia, serif;
+      font-style: italic;
+      font-weight: 300;
+      font-size: 22px;
+      color: #7A6F69;
+      max-width: 560px;
+      margin: 28px auto 48px;
+      line-height: 1.65;
+    }
+
+    .hero-date-pill {
+      display: inline-block;
+      border: 1px solid #C4A98A;
+      font-family: 'Jost', sans-serif;
+      font-weight: 400;
+      font-size: 12px;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: #B87355;
+      padding: 12px 36px;
+      border-radius: 2px;
+      margin-bottom: 20px;
+    }
+
+    .hero-location {
+      font-family: 'Jost', sans-serif;
+      font-weight: 300;
+      font-size: 13px;
+      letter-spacing: 0.12em;
+      color: #9B8880;
+    }
+
+    .hero-scroll-cue {
+      position: absolute;
+      bottom: 36px;
+      left: 50%;
+      transform: translateX(-50%);
+      font-family: 'Jost', sans-serif;
+      font-size: 10px;
+      letter-spacing: 0.25em;
+      text-transform: uppercase;
+      color: #BAB0A8;
+    }
+
+    /* ─── OUR STORY ─── */
+    #story {
+      background-color: #F7F3EE;
+    }
+
+    .story-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 64px;
+      align-items: start;
+    }
+
+    .story-photo-placeholder {
+      background-color: #E8DDD3;
+      border-radius: 4px;
+      aspect-ratio: 3 / 4;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 12px;
+    }
+
+    .story-photo-placeholder span {
+      font-family: 'Cormorant Garamond', serif;
+      font-style: italic;
+      font-size: 16px;
+      color: #BAB0A8;
+    }
+
+    .story-photo-placeholder small {
+      font-family: 'Jost', sans-serif;
+      font-size: 10px;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: #D4B99A;
+    }
+
+    .story-text p { margin-bottom: 28px; }
+
+    .story-cities {
+      display: flex;
+      gap: 0;
+      margin-bottom: 36px;
+      flex-wrap: wrap;
+    }
+
+    .city-tag {
+      font-family: 'Jost', sans-serif;
+      font-weight: 400;
+      font-size: 11px;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      padding: 8px 18px;
+      border-radius: 20px;
+      margin-right: 8px;
+      margin-bottom: 8px;
+    }
+
+    .city-tag.rio    { background-color: #F0E4D7; color: #9B7A5E; }
+    .city-tag.douro  { background-color: #D8E5EF; color: #3D5F7A; }
+    .city-tag.lisbon { background-color: #E8DDD3; color: #7A6058; }
+    .city-tag.ams    { background-color: #E2EAE0; color: #4A6B46; }
+
+    /* ─── THE DAY ─── */
+    #day {
+      background-color: #FDFAF6;
+    }
+
+    .day-header {
+      text-align: center;
+      margin-bottom: 64px;
+    }
+
+    .day-header h2 { margin-bottom: 12px; }
+
+    .day-header p {
+      font-family: 'Cormorant Garamond', serif;
+      font-style: italic;
+      font-size: 20px;
+      color: #9B7A5E;
+      text-align: center;
+    }
+
+    .events-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 24px;
+      margin-bottom: 64px;
+    }
+
+    .event-card {
+      background-color: #F7F3EE;
+      border: 1px solid #E0D5C8;
+      border-radius: 4px;
+      padding: 40px 28px;
+      text-align: center;
+      position: relative;
+    }
+
+    .event-card-top {
+      width: 100%;
+      height: 3px;
+      border-radius: 2px 2px 0 0;
+      position: absolute;
+      top: 0; left: 0;
+    }
+
+    .event-card-top.blue     { background-color: #7B9BB5; }
+    .event-card-top.brown    { background-color: #9B7A5E; }
+    .event-card-top.terra    { background-color: #B87355; }
+
+    .event-emoji {
+      font-size: 28px;
+      display: block;
+      margin-bottom: 20px;
+    }
+
+    .event-time {
+      font-family: 'Jost', sans-serif;
+      font-weight: 400;
+      font-size: 10px;
+      letter-spacing: 0.25em;
+      text-transform: uppercase;
+      color: #B87355;
+      display: block;
+      margin-bottom: 10px;
+    }
+
+    .event-name {
+      font-family: 'Cormorant Garamond', Georgia, serif;
+      font-weight: 400;
+      font-size: 26px;
+      color: #2D2622;
+      display: block;
+      margin-bottom: 14px;
+      line-height: 1.2;
+    }
+
+    .event-desc {
+      font-family: 'Jost', sans-serif;
+      font-weight: 300;
+      font-size: 13px;
+      color: #7A6F69;
+      line-height: 1.7;
+    }
+
+    /* Practical info */
+    .practical-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 24px;
+    }
+
+    .practical-card {
+      background-color: #F7F3EE;
+      border: 1px solid #E0D5C8;
+      border-radius: 4px;
+      padding: 36px 32px;
+    }
+
+    .practical-icon {
+      font-size: 24px;
+      display: block;
+      margin-bottom: 16px;
+    }
+
+    .practical-title {
+      font-family: 'Cormorant Garamond', Georgia, serif;
+      font-weight: 400;
+      font-size: 22px;
+      color: #2D2622;
+      display: block;
+      margin-bottom: 14px;
+    }
+
+    /* ─── VENUE ─── */
+    #venue {
+      background-color: #F0EBE4;
+    }
+
+    .venue-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 64px;
+      align-items: center;
+    }
+
+    .venue-photo-placeholder {
+      background-color: #DDD3C8;
+      border-radius: 4px;
+      aspect-ratio: 4 / 3;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+    }
+
+    .venue-photo-placeholder span {
+      font-family: 'Cormorant Garamond', serif;
+      font-style: italic;
+      font-size: 16px;
+      color: #BAB0A8;
+    }
+
+    .venue-photo-placeholder small {
+      font-family: 'Jost', sans-serif;
+      font-size: 10px;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: #C4A98A;
+    }
+
+    .venue-detail {
+      display: flex;
+      gap: 14px;
+      margin-bottom: 20px;
+      align-items: flex-start;
+    }
+
+    .venue-detail-icon {
+      font-size: 18px;
+      flex-shrink: 0;
+      margin-top: 2px;
+    }
+
+    .venue-detail-text { flex: 1; }
+
+    .venue-detail-label {
+      font-family: 'Jost', sans-serif;
+      font-weight: 400;
+      font-size: 10px;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: #B87355;
+      display: block;
+      margin-bottom: 4px;
+    }
+
+    .venue-detail-value {
+      font-family: 'Jost', sans-serif;
+      font-weight: 300;
+      font-size: 15px;
+      color: #2D2622;
+    }
+
+    /* ─── DRESS CODE ─── */
+    #dresscode {
+      background-color: #FDFAF6;
+    }
+
+    .dresscode-intro {
+      max-width: 620px;
+      margin-bottom: 48px;
+    }
+
+    .dresscode-intro p {
+      font-family: 'Cormorant Garamond', serif;
+      font-style: italic;
+      font-size: 22px;
+      color: #2D2622;
+      line-height: 1.7;
+    }
+
+    .dresscode-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 24px;
+      margin-bottom: 48px;
+    }
+
+    .dress-card {
+      border: 1px solid #E0D5C8;
+      border-radius: 4px;
+      padding: 32px 28px;
+      background-color: #F7F3EE;
+    }
+
+    .dress-card-title {
+      font-family: 'Cormorant Garamond', serif;
+      font-weight: 400;
+      font-size: 22px;
+      color: #2D2622;
+      display: block;
+      margin-bottom: 20px;
+    }
+
+    .dress-list {
+      list-style: none;
+      padding: 0;
+    }
+
+    .dress-list li {
+      font-family: 'Jost', sans-serif;
+      font-weight: 300;
+      font-size: 14px;
+      color: #7A6F69;
+      padding: 7px 0;
+      border-bottom: 1px solid #EDE5DB;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .dress-list li:last-child { border-bottom: none; }
+
+    .dress-list li span { font-size: 14px; }
+
+    /* Guest colour palette */
+    .palette-row {
+      display: flex;
+      gap: 20px;
+      flex-wrap: wrap;
+      margin-top: 16px;
+    }
+
+    .swatch-item { text-align: center; }
+
+    .swatch-circle {
+      width: 60px;
+      height: 60px;
+      border-radius: 50%;
+      border: 1px solid #E0D5C8;
+      margin: 0 auto 8px;
+    }
+
+    .swatch-name {
+      font-family: 'Jost', sans-serif;
+      font-weight: 400;
+      font-size: 11px;
+      color: #7A6F69;
+      display: block;
+    }
+
+    /* ─── RSVP ─── */
+    #rsvp {
+      background-color: #3D5F7A;
+      text-align: center;
+    }
+
+    #rsvp .section-label { color: #C8D9E6; }
+
+    #rsvp h2 {
+      color: #FDFAF6;
+      font-size: 52px;
+      margin-bottom: 20px;
+    }
+
+    #rsvp h2 em { color: #C8D9E6; }
+
+    #rsvp p {
+      color: #B8CCDA;
+      max-width: 520px;
+      margin: 0 auto 48px;
+    }
+
+    .rsvp-btn {
+      display: inline-block;
+      background-color: #B87355;
+      color: #FDFAF6;
+      font-family: 'Jost', sans-serif;
+      font-weight: 400;
+      font-size: 12px;
+      letter-spacing: 0.25em;
+      text-transform: uppercase;
+      padding: 18px 52px;
+      border-radius: 2px;
+      text-decoration: none;
+      transition: background-color 0.2s ease;
+    }
+
+    .rsvp-btn:hover { background-color: #9B7A5E; }
+
+    .rsvp-deadline {
+      display: block;
+      margin-top: 24px;
+      font-family: 'Jost', sans-serif;
+      font-weight: 300;
+      font-size: 13px;
+      letter-spacing: 0.1em;
+      color: #8AAABB;
+    }
+
+    /* ─── COUNTDOWN ─── */
+    .countdown-wrap {
+      display: flex;
+      justify-content: center;
+      gap: 40px;
+      margin: 48px 0;
+    }
+
+    .countdown-unit { text-align: center; }
+
+    .countdown-number {
+      font-family: 'Cormorant Garamond', Georgia, serif;
+      font-weight: 300;
+      font-size: 64px;
+      color: #FDFAF6;
+      line-height: 1;
+      display: block;
+    }
+
+    .countdown-label {
+      font-family: 'Jost', sans-serif;
+      font-weight: 400;
+      font-size: 10px;
+      letter-spacing: 0.25em;
+      text-transform: uppercase;
+      color: #8AAABB;
+      display: block;
+      margin-top: 6px;
+    }
+
+    .countdown-sep {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 48px;
+      color: #5A7F9A;
+      line-height: 1;
+      align-self: flex-start;
+      padding-top: 8px;
+    }
+
+    /* ─── FOOTER ─── */
+    footer {
+      background-color: #2D2622;
+      text-align: center;
+      padding: 52px 40px;
+    }
+
+    .footer-names {
+      font-family: 'Cormorant Garamond', Georgia, serif;
+      font-style: italic;
+      font-weight: 300;
+      font-size: 32px;
+      color: #D4B99A;
+      display: block;
+      margin-bottom: 16px;
+    }
+
+    .footer-detail {
+      font-family: 'Jost', sans-serif;
+      font-weight: 300;
+      font-size: 11px;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: #7A6F69;
+      margin-bottom: 8px;
+    }
+
+    .footer-from {
+      font-family: 'Cormorant Garamond', serif;
+      font-style: italic;
+      font-size: 14px;
+      color: #5F5550;
+      margin-top: 20px;
+    }
+
+    /* ─── RESPONSIVE ─── */
+    @media (max-width: 720px) {
+      .hero-names { font-size: 52px; }
+      .hero-names em { font-size: 42px; }
+      h2 { font-size: 36px; }
+      .section-wrap { padding: 72px 24px; }
+      .story-grid { grid-template-columns: 1fr; }
+      .story-photo-placeholder { aspect-ratio: 4 / 3; }
+      .events-grid { grid-template-columns: 1fr; }
+      .practical-grid { grid-template-columns: 1fr; }
+      .venue-grid { grid-template-columns: 1fr; }
+      .dresscode-grid { grid-template-columns: 1fr; }
+      .countdown-wrap { gap: 20px; }
+      .countdown-number { font-size: 44px; }
+      nav { gap: 2px; }
+      nav a { padding: 6px 8px; font-size: 10px; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ═══════════════════════════════════════════════
+       NAVIGATION
+  ═══════════════════════════════════════════════ -->
+  <nav>
+    <a href="#story">Our Story</a>
+    <a href="#day">The Day</a>
+    <a href="#venue">Venue</a>
+    <a href="#dresscode">Dress Code</a>
+    <a href="#rsvp" class="nav-rsvp">RSVP</a>
+  </nav>
+
+
+  <!-- ═══════════════════════════════════════════════
+       HERO
+  ═══════════════════════════════════════════════ -->
+  <section id="hero">
+    <div class="hero-bg-left"></div>
+    <div class="hero-bg-right"></div>
+
+    <p class="hero-eyebrow">You are invited to celebrate</p>
+
+    <h1 class="hero-names">
+      Isabella<br>
+      <em>&amp;</em><br>
+      Pedro
+    </h1>
+
+    <p class="hero-tagline">
+      From the banks of the Douro to the streets of Rio —<br>
+      love found its way to Lisbon, bloomed in Amsterdam,<br>
+      and is now coming home to Portugal.
+    </p>
+
+    <div class="hero-date-pill">10 · September · 2027</div>
+
+    <p class="hero-location">Quinta do Paço &nbsp;·&nbsp; Vila Real &nbsp;·&nbsp; Portugal</p>
+
+    <p class="hero-scroll-cue">↓ &nbsp; Scroll to explore</p>
+  </section>
+
+
+  <hr class="section-divider" />
+
+
+  <!-- ═══════════════════════════════════════════════
+       OUR STORY
+  ═══════════════════════════════════════════════ -->
+  <section id="story">
+    <div class="section-wrap">
+
+      <span class="section-label">Our Story</span>
+      <h2>Two Cities.<br><em>One Great Love.</em></h2>
+
+      <div class="story-cities">
+        <span class="city-tag rio">🌊 Rio de Janeiro</span>
+        <span class="city-tag douro">🍇 Douro Valley</span>
+        <span class="city-tag lisbon">🏛 Lisbon</span>
+        <span class="city-tag ams">🌷 Amsterdam</span>
+      </div>
+
+      <div class="story-grid">
+
+        <div class="story-photo-placeholder">
+          <span>Your photo here</span>
+          <small>Replace in Canva</small>
+        </div>
+
+        <div class="story-text">
+          <p>
+            She grew up with the warmth of Rio in her bones — samba, sun, and the kind of laughter that fills an entire room. He grew up among the ancient quintas of the Douro Valley, where time moves slowly, vines grow patiently, and good wine is never rushed. Two people who could not have been more different, on two sides of an ocean, entirely unaware that Lisbon was already waiting for them.
+          </p>
+          <p>
+            Lisbon, that relentlessly beautiful city, has always had a talent for making strangers feel like they've come home. It did exactly that for both of them — and, one ordinary evening that became anything but ordinary, it introduced them to each other. They talked until the trams stopped running. They have not stopped talking since.
+          </p>
+          <p>
+            Today, they call Amsterdam home — a city of canals, bicycles, and one extremely opinionated Romanian rescue dog. And on the 10th of September 2027, they will say their vows where the story has always belonged: under the Portuguese sky, surrounded by the people they love most, with very good wine and absolutely no plan to stop dancing until dawn.
+          </p>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+
+  <hr class="section-divider" />
+
+
+  <!-- ═══════════════════════════════════════════════
+       THE DAY
+  ═══════════════════════════════════════════════ -->
+  <section id="day">
+    <div class="section-wrap">
+
+      <div class="day-header">
+        <span class="section-label">Thursday, 10th September 2027</span>
+        <h2>The <em>Celebration</em></h2>
+        <p>Quinta do Paço · Vila Real · Portugal</p>
+      </div>
+
+      <!-- Event Cards -->
+      <div class="events-grid">
+
+        <div class="event-card">
+          <div class="event-card-top blue"></div>
+          <span class="event-emoji">🕊</span>
+          <span class="event-time">16:00</span>
+          <span class="event-name">Civil Ceremony</span>
+          <p class="event-desc">The moment we've been waiting for. Please arrive by 15:45 — we'd love to see every face when we say "I do".</p>
+        </div>
+
+        <div class="event-card">
+          <div class="event-card-top brown"></div>
+          <span class="event-emoji">🥂</span>
+          <span class="event-time">17:00</span>
+          <span class="event-name">Cocktail &amp; Dinner</span>
+          <p class="event-desc">Drinks at the Solar garden, followed by a long, leisurely dinner under the stars. Expect great food, Douro wine, and even better company.</p>
+        </div>
+
+        <div class="event-card">
+          <div class="event-card-top terra"></div>
+          <span class="event-emoji">✨</span>
+          <span class="event-time">23:00</span>
+          <span class="event-name">Afterparty</span>
+          <p class="event-desc">When dinner ends, the real party begins. Dancing and disco balls until 3AM — maybe 4. Pace yourselves at dinner.</p>
+        </div>
+
+      </div>
+
+      <span class="ornament">· · ·</span>
+
+      <!-- Practical Info -->
+      <span class="section-label">Getting Here &amp; Staying Over</span>
+
+      <div class="practical-grid">
+
+        <div class="practical-card">
+          <span class="practical-icon">✈️</span>
+          <span class="practical-title">Getting There</span>
+          <p>The nearest airport is Francisco Sá Carneiro (Porto), approximately 1h15 from the venue. We recommend flying into Porto and renting a car, or joining a shuttle. A transfer from Porto city centre will be available — details to follow.</p>
+        </div>
+
+        <div class="practical-card">
+          <span class="practical-icon">🏡</span>
+          <span class="practical-title">Where to Stay</span>
+          <p>Quinta do Paço has rooms available for guests at a special rate: Single €90 · Double €110. For more options, Vila Real town centre is a 10-minute drive. Book early — September in the Douro goes fast.</p>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+
+  <hr class="section-divider" />
+
+
+  <!-- ═══════════════════════════════════════════════
+       VENUE
+  ═══════════════════════════════════════════════ -->
+  <section id="venue">
+    <div class="section-wrap">
+
+      <span class="section-label">Where the Magic Happens</span>
+      <div class="venue-grid">
+
+        <div>
+          <h2>Quinta do <em>Paço</em></h2>
+          <p>Nestled in the hills of Vila Real, Quinta do Paço is a centuries-old manor surrounded by vineyards, terraced gardens, and sweeping views of the Douro Valley. It is exactly the kind of place where memories are made and toasts are repeated.</p>
+
+          <div style="margin-top: 36px;">
+
+            <div class="venue-detail">
+              <span class="venue-detail-icon">📍</span>
+              <div class="venue-detail-text">
+                <span class="venue-detail-label">Address</span>
+                <span class="venue-detail-value">Quinta do Paço, Vila Real, Portugal</span>
+              </div>
+            </div>
+
+            <div class="venue-detail">
+              <span class="venue-detail-icon">🚗</span>
+              <div class="venue-detail-text">
+                <span class="venue-detail-label">From Porto Airport</span>
+                <span class="venue-detail-value">Approx. 1 hour 15 minutes by car</span>
+              </div>
+            </div>
+
+            <div class="venue-detail">
+              <span class="venue-detail-icon">🅿️</span>
+              <div class="venue-detail-text">
+                <span class="venue-detail-label">Parking</span>
+                <span class="venue-detail-value">Free on-site parking available</span>
+              </div>
+            </div>
+
+            <div class="venue-detail">
+              <span class="venue-detail-icon">🌡</span>
+              <div class="venue-detail-text">
+                <span class="venue-detail-label">September Weather</span>
+                <span class="venue-detail-value">Warm &amp; golden — typically 26–30°C</span>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+        <div class="venue-photo-placeholder">
+          <span>Venue photo here</span>
+          <small>Replace in Canva</small>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+
+  <hr class="section-divider" />
+
+
+  <!-- ═══════════════════════════════════════════════
+       DRESS CODE
+  ═══════════════════════════════════════════════ -->
+  <section id="dresscode">
+    <div class="section-wrap">
+
+      <span class="section-label">Dress Code</span>
+      <h2>Garden Party <em>Elegance</em></h2>
+
+      <div class="dresscode-intro">
+        <p>"Think: the best version of yourself enjoying a warm September evening in a Portuguese quinta. Soft, earthy tones and florals are warmly encouraged. And please — white is taken."</p>
+      </div>
+
+      <div class="dresscode-grid">
+
+        <div class="dress-card">
+          <span class="dress-card-title">We love to see ✨</span>
+          <ul class="dress-list">
+            <li><span>🌿</span> Linen suits &amp; relaxed blazers</li>
+            <li><span>👗</span> Flowy midi &amp; maxi dresses</li>
+            <li><span>🌸</span> Floral prints &amp; soft pastels</li>
+            <li><span>🎨</span> Earthy tones, sage, terracotta, dusty blue</li>
+            <li><span>👡</span> Wedge heels or block heels (cobblestones!)</li>
+            <li><span>🌙</span> Cardigan for after midnight — Douro nights are dreamy</li>
+          </ul>
+        </div>
+
+        <div class="dress-card">
+          <span class="dress-card-title">Please avoid 🙏</span>
+          <ul class="dress-list">
+            <li><span>🤍</span> White, ivory, or cream</li>
+            <li><span>🎩</span> Black tie / ultra-formal</li>
+            <li><span>👠</span> Stilettos (outdoor cobblestone venue)</li>
+            <li><span>👖</span> Denim (save it for Sunday brunch)</li>
+            <li><span>🏖</span> Very casual or beachwear</li>
+            <li><span>💼</span> Anything that looks like a Monday</li>
+          </ul>
+        </div>
+
+      </div>
+
+      <!-- Guest colour palette -->
+      <span class="section-label">Suggested Colours for Guests</span>
+      <div class="palette-row">
+        <div class="swatch-item">
+          <div class="swatch-circle" style="background-color: #F7F3EE;"></div>
+          <span class="swatch-name">Parchment</span>
+        </div>
+        <div class="swatch-item">
+          <div class="swatch-circle" style="background-color: #8FA68B;"></div>
+          <span class="swatch-name">Sage</span>
+        </div>
+        <div class="swatch-item">
+          <div class="swatch-circle" style="background-color: #B87355;"></div>
+          <span class="swatch-name">Terracotta</span>
+        </div>
+        <div class="swatch-item">
+          <div class="swatch-circle" style="background-color: #7B9BB5;"></div>
+          <span class="swatch-name">Douro Blue</span>
+        </div>
+        <div class="swatch-item">
+          <div class="swatch-circle" style="background-color: #E8C9B8;"></div>
+          <span class="swatch-name">Blush</span>
+        </div>
+        <div class="swatch-item">
+          <div class="swatch-circle" style="background-color: #D4B99A;"></div>
+          <span class="swatch-name">Pale Sand</span>
+        </div>
+        <div class="swatch-item">
+          <div class="swatch-circle" style="background-color: #9B7A5E;"></div>
+          <span class="swatch-name">Terra</span>
+        </div>
+        <div class="swatch-item">
+          <div class="swatch-circle" style="background-color: #C8D9E6;"></div>
+          <span class="swatch-name">Morning Sky</span>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+
+  <hr class="section-divider" />
+
+
+  <!-- ═══════════════════════════════════════════════
+       RSVP
+  ═══════════════════════════════════════════════ -->
+  <section id="rsvp">
+    <div class="section-wrap">
+
+      <span class="section-label">Join Us</span>
+      <h2>Will You <em>Be There?</em></h2>
+
+      <!-- Countdown -->
+      <div class="countdown-wrap">
+        <div class="countdown-unit">
+          <span class="countdown-number" id="cd-days">--</span>
+          <span class="countdown-label">Days</span>
+        </div>
+        <span class="countdown-sep">·</span>
+        <div class="countdown-unit">
+          <span class="countdown-number" id="cd-hours">--</span>
+          <span class="countdown-label">Hours</span>
+        </div>
+        <span class="countdown-sep">·</span>
+        <div class="countdown-unit">
+          <span class="countdown-number" id="cd-mins">--</span>
+          <span class="countdown-label">Minutes</span>
+        </div>
+        <span class="countdown-sep">·</span>
+        <div class="countdown-unit">
+          <span class="countdown-number" id="cd-secs">--</span>
+          <span class="countdown-label">Seconds</span>
+        </div>
+      </div>
+
+      <p>We'd love to know you're coming. It only takes two minutes — and it means the world to us.</p>
+
+      <!-- ★ REPLACE THE HREF BELOW WITH YOUR TYPEFORM OR GOOGLE FORM LINK ★ -->
+      <a href="YOUR-RSVP-LINK-HERE" class="rsvp-btn" target="_blank" rel="noopener">
+        RSVP Now &nbsp;→
+      </a>
+
+      <span class="rsvp-deadline">Kindly respond by 1st June 2027</span>
+
+    </div>
+  </section>
+
+
+  <!-- ═══════════════════════════════════════════════
+       FOOTER
+  ═══════════════════════════════════════════════ -->
+  <footer>
+    <span class="footer-names">Isabella &amp; Pedro</span>
+    <p class="footer-detail">10 · September · 2027 &nbsp;·&nbsp; Quinta do Paço, Vila Real, Portugal</p>
+    <p class="footer-from">From Francesinha to Pão de Queijo — with all our love.</p>
+  </footer>
+
+
+  <!-- ═══════════════════════════════════════════════
+       JAVASCRIPT — Countdown Timer & Smooth Scroll
+  ═══════════════════════════════════════════════ -->
+  <script>
+    // ── Countdown Timer ──────────────────────────
+    function updateCountdown() {
+      var target = new Date('2027-09-10T16:00:00');
+      var now = new Date();
+      var diff = target - now;
+
+      if (diff <= 0) {
+        document.getElementById('cd-days').textContent  = '0';
+        document.getElementById('cd-hours').textContent = '0';
+        document.getElementById('cd-mins').textContent  = '0';
+        document.getElementById('cd-secs').textContent  = '0';
+        return;
+      }
+
+      var days  = Math.floor(diff / (1000 * 60 * 60 * 24));
+      var hours = Math.floor((diff % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+      var mins  = Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60));
+      var secs  = Math.floor((diff % (1000 * 60)) / 1000);
+
+      document.getElementById('cd-days').textContent  = days;
+      document.getElementById('cd-hours').textContent = hours < 10 ? '0' + hours : hours;
+      document.getElementById('cd-mins').textContent  = mins  < 10 ? '0' + mins  : mins;
+      document.getElementById('cd-secs').textContent  = secs  < 10 ? '0' + secs  : secs;
+    }
+
+    updateCountdown();
+    setInterval(updateCountdown, 1000);
+
+    // ── Smooth Scroll ─────────────────────────────
+    document.querySelectorAll('a[href^="#"]').forEach(function(link) {
+      link.addEventListener('click', function(e) {
+        var target = document.querySelector(this.getAttribute('href'));
+        if (target) {
+          e.preventDefault();
+          target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        }
+      });
+    });
+  </script>
+
+</body>
+</html>
